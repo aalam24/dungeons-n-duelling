@@ -7,6 +7,7 @@ script = ExtResource("1_h2fdi")
 id = "barbarian"
 display_name = "Barbarian"
 hit_die = 12
+primary_abilities = Array[String](["STR", "CON"])
 saving_throws = Array[String](["STR", "DEX"])
 description = "Barbarians are mighty warriors who are powered by primal forces of the multiverse that manifest as a Rage. More than a mere emotion—and not limited to anger—this Rage is an incarnation of a predator’s ferocity, a storm's fury, and a sea's turmoil."
 skill_choices = Array[String](["Intimidation"])

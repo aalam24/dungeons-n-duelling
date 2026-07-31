@@ -7,7 +7,8 @@ var backgrounds: Dictionary = {}
 func _ready() -> void:
 	classes = _load_dir("res://rules/classes/")
 	races = _load_dir("res://rules/races/")
-	backgrounds = _load_dir("res://rules/backgrounds")
+	backgrounds = _load_dir("res://rules/backgrounds/")
+	print("classes: %d  races: %d  backgrounds: %d" % [classes.size(), races.size(), backgrounds.size()])
 	
 func _load_dir(path: String) -> Dictionary: 
 	var out := {}

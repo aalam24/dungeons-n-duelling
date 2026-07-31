@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="TraitDef" format=3 uid="uid://b7mdwajo4bu0m"]
+
+[ext_resource type="Script" uid="uid://bj27exbb6e5n1" path="res://rules/trait_def.gd" id="1_4hw1s"]
+
+[resource]
+script = ExtResource("1_4hw1s")
+id = "skillful"
+display_name = "Skillful"
+description = "You gain proficiency in one skill of your choice."
+metadata/_custom_type_script = "uid://bj27exbb6e5n1"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="BackgroundDef" format=3 uid="uid://nauscyx1obfg"]
+
+[ext_resource type="Script" uid="uid://diu7y1va4temj" path="res://rules/background_def.gd" id="1_udbs5"]
+
+[resource]
+script = ExtResource("1_udbs5")
+id = "acolyte"
+display_name = "Acolyte"
+skills = Array[String](["Insight", "Religion"])
+tool_prof = Array[String](["Calligrapher's Supplies"])
+description = "You devoted yourself to service in a temple, either nestled in a town or secluded in a sacred grove. There you performed rites in honor of a god or pantheon. You served under a priest and studied religion. Thanks to your priest’s instruction and your own devotion, you also learned how to channel a modicum of divine power in service to your place of worship and the people who prayed there."
+metadata/_custom_type_script = "uid://diu7y1va4temj"
