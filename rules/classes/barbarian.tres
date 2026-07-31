@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ClassDef" format=3 uid="uid://b7y4socbadqym"]
+
+[ext_resource type="Script" uid="uid://yc4ax1alifi8" path="res://rules/class_def.gd" id="1_h2fdi"]
+
+[resource]
+script = ExtResource("1_h2fdi")
+id = "barbarian"
+display_name = "Barbarian"
+hit_die = 12
+saving_throws = Array[String](["STR", "DEX"])
+description = "Barbarians are mighty warriors who are powered by primal forces of the multiverse that manifest as a Rage. More than a mere emotion—and not limited to anger—this Rage is an incarnation of a predator’s ferocity, a storm's fury, and a sea's turmoil."
+skill_choices = Array[String](["Intimidation"])
+metadata/_custom_type_script = "uid://yc4ax1alifi8"

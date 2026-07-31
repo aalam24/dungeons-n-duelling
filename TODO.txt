@@ -1,0 +1,54 @@
+Main Menu: 
+High Prio ->
+- Save/Load character
+- creative mode button / debug button *spawn enemies/allies or change stats willingly to "test duels"
+- character creation button to save/load character
+Low Prio ->
+- Survival/dungeon/trial mode * waves of enemies or something? maybe like a roguelite?
+
+Character Creation tab: 
+High Prio ->
+- Ability scores (point buy)
+- Race and Bonuses
+- Classes (prob use PHB 24 for these idk)
+- Spell slots
+- AC
+- Movement?
+- Weight and size
+Low Prio ->
+- Items
+- Feats
+- Leveling
+- Multiclassing
+- Weapon/Armor proficiencies 
+- Skill proficiencies 
+- Deities for clerics/warlocks
+
+Creative Mode
+High Prio ->
+- Ground
+- Spawn the character
+- Spawn enemies
+Low Prio ->
+- Difficult terrain
+- Elevation
+- Walls/fog of war
+- Water?
+
+Combat
+High Prio ->
+- Dice rolls
+- Initiative/turn based mode
+- Damage type
+- Damage immunities/resistances/vulnerabilities
+- Buffs/debuffs
+- Item interactions in combat
+- Ability modifiers
+- Spells/Projectiles
+- Combat log
+- Movement speed/traversing terrain
+Low Prio ->
+- Consumables
+- Weapon hit chance
+- Damage riders
+- Falling damage

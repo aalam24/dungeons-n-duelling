@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://oiux1ag8lrhs"]
+
+[ext_resource type="Script" uid="uid://bnuq2nsmgh75s" path="res://scripts/ui/play_menu.gd" id="1_8jhgl"]
+
+[node name="PlayMenu" type="Control" unique_id=1026200844]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8jhgl")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=726384371]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1865358175]
+layout_mode = 2
+alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="CenterContainer/VBoxContainer" unique_id=1385901100]
+layout_mode = 2
+theme_override_constants/h_separation = 60
+theme_override_constants/v_separation = 10
+columns = 2
+
+[node name="NewCharButton" type="Button" parent="CenterContainer/VBoxContainer/GridContainer" unique_id=1925475393]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(360, 200)
+layout_mode = 2
+text = "New Character"
+
+[node name="SandboxButton" type="Button" parent="CenterContainer/VBoxContainer/GridContainer" unique_id=230601168]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+text = "Sandbox
+"
+
+[node name="LoadCharButton" type="Button" parent="CenterContainer/VBoxContainer/GridContainer" unique_id=1333300402]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(360, 200)
+layout_mode = 2
+text = "Load Character"
+
+[node name="SurvivalButton" type="Button" parent="CenterContainer/VBoxContainer/GridContainer" unique_id=891723950]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Survival"
+
+[node name="BackButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1900755558]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Back"
