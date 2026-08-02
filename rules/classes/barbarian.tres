@@ -1,6 +1,9 @@
 [gd_resource type="Resource" script_class="ClassDef" format=3 uid="uid://b7y4socbadqym"]
 
+[ext_resource type="Script" uid="uid://bj27exbb6e5n1" path="res://rules/trait_def.gd" id="1_af3b8"]
 [ext_resource type="Script" uid="uid://yc4ax1alifi8" path="res://rules/class_def.gd" id="1_h2fdi"]
+[ext_resource type="Resource" uid="uid://b8ti3gp401gcv" path="res://rules/traits/rage.tres" id="2_pm3e4"]
+[ext_resource type="Resource" uid="uid://b8b412cpep768" path="res://rules/traits/unarmoured_defense_barbarian.tres" id="3_sypsp"]
 
 [resource]
 script = ExtResource("1_h2fdi")
@@ -10,5 +13,6 @@ hit_die = 12
 primary_abilities = Array[String](["STR", "CON"])
 saving_throws = Array[String](["STR", "DEX"])
 description = "Barbarians are mighty warriors who are powered by primal forces of the multiverse that manifest as a Rage. More than a mere emotion—and not limited to anger—this Rage is an incarnation of a predator’s ferocity, a storm's fury, and a sea's turmoil."
-skill_choices = Array[String](["Intimidation"])
+skill_choices = Array[String](["Animal Handling", "Athletics", "Intimidation", "Nature", "Perception", "Survival"])
+level_1_features = Array[ExtResource("1_af3b8")]([ExtResource("2_pm3e4"), ExtResource("3_sypsp")])
 metadata/_custom_type_script = "uid://yc4ax1alifi8"

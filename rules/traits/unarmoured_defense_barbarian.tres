@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="TraitDef" format=3 uid="uid://b8b412cpep768"]
+
+[ext_resource type="Script" uid="uid://bj27exbb6e5n1" path="res://rules/trait_def.gd" id="1_cgv62"]
+
+[resource]
+script = ExtResource("1_cgv62")
+id = "unarmouredDefenseBarbarian"
+display_name = "Unarmoured Defense"
+description = "While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit."
+metadata/_custom_type_script = "uid://bj27exbb6e5n1"

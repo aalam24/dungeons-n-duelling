@@ -9,4 +9,5 @@ display_name = "Acolyte"
 skills = Array[String](["Insight", "Religion"])
 tool_prof = Array[String](["Calligrapher's Supplies"])
 description = "You devoted yourself to service in a temple, either nestled in a town or secluded in a sacred grove. There you performed rites in honor of a god or pantheon. You served under a priest and studied religion. Thanks to your priest’s instruction and your own devotion, you also learned how to channel a modicum of divine power in service to your place of worship and the people who prayed there."
+starting_equipment = Array[String](["Holy symbol", "Prayer book", "Sticks of incense", "Vestments", "Common clothing", "Gold"])
 metadata/_custom_type_script = "uid://diu7y1va4temj"

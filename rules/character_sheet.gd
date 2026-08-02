@@ -7,7 +7,7 @@ extends Resource
 @export var background: String = ""
 @export var level: int = 1
 
-@export var base_abilities = {
+@export var base_abilities: Dictionary = {
 	"STR": 8, "DEX": 8, "CON": 8,
 	"INT": 8, "WIS": 8, "CHA": 8
 }

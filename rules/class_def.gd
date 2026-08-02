@@ -11,3 +11,4 @@ extends Resource
 @export var icon: Texture2D # IMPLEMENT LATER
 @export var skill_choice_count: int = 2 # amount of skills for class they pick
 @export var skill_choices: Array[String] = [] # eligible list of skills 
+@export var level_1_features: Array[TraitDef] = []
