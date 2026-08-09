@@ -15,6 +15,8 @@ extends Resource
 @export var asi_major: String = "" # should be +2
 @export var asi_minor: String = "" # should be +1
 @export var chosen_class_skills: Array[String] = []
+@export var known_cantrips: Array[String] = [] #spell ids
+@export var known_spells: Array[String] = []
 
 func ability_score(key: String) -> int:
 	var score: int = base_abilities[key]

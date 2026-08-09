@@ -12,3 +12,6 @@ extends Resource
 @export var skill_choice_count: int = 2 # amount of skills for class they pick
 @export var skill_choices: Array[String] = [] # eligible list of skills 
 @export var level_1_features: Array[TraitDef] = []
+@export var spell_list: Array[SpellDef] = []
+@export var cantrips_known_at_1: int = 0
+@export var spells_known_at_1: int = 0

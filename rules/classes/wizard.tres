@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ClassDef" format=3 uid="uid://dphgsm5r3x706"]
+
+[ext_resource type="Script" uid="uid://bj27exbb6e5n1" path="res://rules/trait_def.gd" id="1_64221"]
+[ext_resource type="Script" uid="uid://yc4ax1alifi8" path="res://rules/class_def.gd" id="2_250xr"]
+
+[resource]
+script = ExtResource("2_250xr")
+id = "wizard"
+display_name = "Wizard"
+metadata/_custom_type_script = "uid://yc4ax1alifi8"
