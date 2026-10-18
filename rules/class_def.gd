@@ -15,3 +15,7 @@ extends Resource
 @export var spell_list: Array[SpellDef] = []
 @export var cantrips_known_at_1: int = 0
 @export var spells_known_at_1: int = 0
+@export_group("Proficiencies")
+@export_flags("Light", "Medium", "Heavy", "Shields") var armor_profs: int = 0
+@export_flags("Simple", "Martial") var weapon_categories: int = 0
+@export var specific_weapons: Array[String] = []

@@ -1,10 +1,24 @@
 [gd_resource type="Resource" script_class="ClassDef" format=3 uid="uid://dphgsm5r3x706"]
 
+[ext_resource type="Texture2D" uid="uid://by88vc43r3bpj" path="res://ui/icons/classes/wizard.png" id="1_52qxn"]
 [ext_resource type="Script" uid="uid://bj27exbb6e5n1" path="res://rules/trait_def.gd" id="1_64221"]
 [ext_resource type="Script" uid="uid://yc4ax1alifi8" path="res://rules/class_def.gd" id="2_250xr"]
+[ext_resource type="Script" uid="uid://ck72s4gnt1ypy" path="res://rules/spell_def.gd" id="3_ob0cx"]
+[ext_resource type="Resource" uid="uid://ct6fux4ly0gpw" path="res://rules/spells/fireball.tres" id="4_52qxn"]
+[ext_resource type="Resource" uid="uid://ber4ugqxy7jp0" path="res://rules/spells/firebolt.tres" id="5_sjrou"]
+[ext_resource type="Resource" uid="uid://cb4p0lbwhfrek" path="res://rules/spells/magic_missile.tres" id="6_hhc7j"]
+[ext_resource type="Resource" uid="uid://cajqx8jfvx34t" path="res://rules/spells/shield.tres" id="7_bqqws"]
 
 [resource]
 script = ExtResource("2_250xr")
 id = "wizard"
 display_name = "Wizard"
+primary_abilities = Array[String](["INT"])
+saving_throws = Array[String](["INT", "WIS"])
+spellcasting_ability = "INT"
+icon = ExtResource("1_52qxn")
+spell_list = Array[ExtResource("3_ob0cx")]([ExtResource("4_52qxn"), ExtResource("5_sjrou"), ExtResource("6_hhc7j"), ExtResource("7_bqqws")])
+cantrips_known_at_1 = 3
+spells_known_at_1 = 6
+weapon_categories = 1
 metadata/_custom_type_script = "uid://yc4ax1alifi8"

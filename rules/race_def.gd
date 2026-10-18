@@ -10,3 +10,7 @@ extends Resource
 @export_multiline var description: String = ""
 @export var icon: Texture2D
 @export var model_scene: PackedScene
+@export_group("Proficiencies")
+@export_flags("Light", "Medium", "Heavy", "Shields") var armor_profs: int = 0
+@export_flags("Simple", "Martial") var weapon_categories: int = 0
+@export var specific_weapons: Array[String] = []

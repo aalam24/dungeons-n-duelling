@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="SpellDef" format=3 uid="uid://ber4ugqxy7jp0"]
 
+[ext_resource type="Texture2D" uid="uid://ci7tb2b46vxrd" path="res://ui/icons/spells/firebolt_icon.png" id="1_fm05e"]
 [ext_resource type="Script" uid="uid://ck72s4gnt1ypy" path="res://rules/spell_def.gd" id="1_jdj6v"]
 
 [resource]
@@ -8,8 +9,9 @@ id = "firebolt"
 display_name = "Fire Bolt"
 level = 0
 description = "You hurl a mote of fire at a creature or an object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 Fire damage. A flammable object hit by this spell starts burning if it isn't being worn or carried."
+icon = ExtResource("1_fm05e")
 range_ft = 120
 attack_roll = true
 damage_dice = "1d10"
-damage_type = "Fire"
+damage_type = "fire"
 metadata/_custom_type_script = "uid://ck72s4gnt1ypy"

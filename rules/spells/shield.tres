@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="SpellDef" format=3 uid="uid://cajqx8jfvx34t"]
 
 [ext_resource type="Script" uid="uid://ck72s4gnt1ypy" path="res://rules/spell_def.gd" id="1_7qmmp"]
+[ext_resource type="Texture2D" uid="uid://clwxhhyalok10" path="res://ui/icons/spells/shield.png" id="1_fehtr"]
 
 [resource]
 script = ExtResource("1_7qmmp")
@@ -8,6 +9,7 @@ id = "shield"
 display_name = "Shield"
 school = 0
 description = "An imperceptible barrier of magical force protects you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and you take no damage from Magic Missile."
+icon = ExtResource("1_fehtr")
 casting_time = "reaction"
 target_mode = 0
 metadata/_custom_type_script = "uid://ck72s4gnt1ypy"

@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://dkjgh7yxpitx5"]
+
+[ext_resource type="Script" uid="uid://hwfyn5o18br0" path="res://scripts/battle/sandbox.gd" id="1_4klvo"]
+[ext_resource type="Shader" uid="uid://bqokrh0fx358c" path="res://shaders/grid.gdshader" id="1_7wt2w"]
+[ext_resource type="Script" uid="uid://boau1p8bna0hu" path="res://scripts/battle/camera_rig.gd" id="2_0xfq3"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xfq3"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_4klvo"]
+sky_material = SubResource("ProceduralSkyMaterial_0xfq3")
+
+[sub_resource type="Environment" id="Environment_n255c"]
+background_mode = 2
+sky = SubResource("Sky_4klvo")
+glow_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_kpsxl"]
+size = Vector2(60, 60)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5gmk0"]
+render_priority = 0
+shader = ExtResource("1_7wt2w")
+shader_parameter/cell_size = 1.5
+shader_parameter/line_width = 0.03
+shader_parameter/ground_color = Color(0.26, 0.33, 0.22, 1)
+shader_parameter/line_color = Color(0, 0, 0, 0.35)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mbq0b"]
+size = Vector3(60, 0.2, 60)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bs287"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(1, 1, 1, 0.22745098)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mbq0b"]
+material = SubResource("StandardMaterial3D_bs287")
+size = Vector2(1.4, 1.4)
+
+[node name="Sandbox" type="Node3D" unique_id=1563986255]
+script = ExtResource("1_4klvo")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1623710057]
+environment = SubResource("Environment_n255c")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=31636173]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Ground" type="StaticBody3D" parent="." unique_id=2114310501]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground" unique_id=1202520021]
+mesh = SubResource("PlaneMesh_kpsxl")
+surface_material_override/0 = SubResource("ShaderMaterial_5gmk0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=1356869711]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+shape = SubResource("BoxShape3D_mbq0b")
+
+[node name="CameraRig" type="Node3D" parent="." unique_id=334794974]
+script = ExtResource("2_0xfq3")
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig" unique_id=241530626]
+transform = Transform3D(1, 0, 0, 0, 0.60181504, 0.79863554, 0, -0.79863554, 0.60181504, 0, 12.8, 9.6)
+
+[node name="CellCursor" type="MeshInstance3D" parent="." unique_id=227932345]
+mesh = SubResource("PlaneMesh_mbq0b")
+
+[node name="Combatants" type="Node3D" parent="." unique_id=849493784]
+unique_name_in_owner = true
+
+[node name="GMOverlay" type="CanvasLayer" parent="." unique_id=1088172364]
+
+[node name="SpawnPanel" type="PanelContainer" parent="GMOverlay" unique_id=2140149901]
+custom_minimum_size = Vector2(240, 0)
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 60.0
+offset_bottom = 60.0
+
+[node name="MarginContainer" type="MarginContainer" parent="GMOverlay/SpawnPanel" unique_id=810427508]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GMOverlay/SpawnPanel/MarginContainer" unique_id=1906161563]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="GMOverlay/SpawnPanel/MarginContainer/VBoxContainer" unique_id=1211883688]
+layout_mode = 2
+text = "Summon"
+
+[node name="TeamSelect" type="OptionButton" parent="GMOverlay/SpawnPanel/MarginContainer/VBoxContainer" unique_id=1375048626]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SpawnList" type="VBoxContainer" parent="GMOverlay/SpawnPanel/MarginContainer/VBoxContainer" unique_id=812044811]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="StatusLabel" type="Label" parent="GMOverlay/SpawnPanel/MarginContainer/VBoxContainer" unique_id=233546235]
+unique_name_in_owner = true
+layout_mode = 2
+autowrap_mode = 2

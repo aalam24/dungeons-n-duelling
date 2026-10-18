@@ -31,3 +31,4 @@ enum SaveEffect {NONE, HALF, NEGATE}
 @export var damage_dice: String = ""
 @export var damage_type: String = ""
 @export var upcast_dice: String = "" # 1d6 per level 
+@export var projectiles: int = 1

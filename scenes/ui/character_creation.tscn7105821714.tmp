@@ -1,0 +1,776 @@
+[gd_scene format=3 uid="uid://ll3oocmq0y3e"]
+
+[ext_resource type="Script" uid="uid://cfk05rgmgbwp2" path="res://scripts/ui/character_creation.gd" id="1_r0iii"]
+[ext_resource type="ButtonGroup" uid="uid://y8vtlf4accc3" path="res://ui/nav_button_group.tres" id="2_locca"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mbq0b"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqpd8"]
+bg_color = Color(0.9254902, 0.91764706, 0.79607844, 0.16470589)
+border_color = Color(0.92828435, 0.9102004, 0.4852829, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bs287"]
+bg_color = Color(0.6, 0.6, 0.6, 0.09411765)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tj671"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kpsxl"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(8.6635355e-06, 0.9303484, 0.7767082, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_locca"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tqx8g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cb55y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6jn8k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ttryc"]
+
+[sub_resource type="Environment" id="Environment_locca"]
+
+[node name="CharacterCreation" type="Control" unique_id=415034444]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r0iii")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1067519097]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 12.0
+offset_right = -19.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+
+[node name="NavRail" type="VBoxContainer" parent="HBoxContainer" unique_id=644791723]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_visual_only = false
+theme_override_constants/separation = 30
+
+[node name="NameNav" type="Button" parent="HBoxContainer/NavRail" unique_id=1437730294]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 64)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_mbq0b")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bqpd8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bs287")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tj671")
+toggle_mode = true
+button_group = ExtResource("2_locca")
+icon_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/NavRail/NameNav" unique_id=2135045872]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="Circle" type="Panel" parent="HBoxContainer/NavRail/NameNav/HBoxContainer" unique_id=754897701]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kpsxl")
+
+[node name="Label" type="Label" parent="HBoxContainer/NavRail/NameNav/HBoxContainer" unique_id=727548473]
+layout_mode = 2
+text = "Name"
+
+[node name="RaceNav" type="Button" parent="HBoxContainer/NavRail" unique_id=1301067938]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 60)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_mbq0b")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bqpd8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bs287")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_locca")
+toggle_mode = true
+button_group = ExtResource("2_locca")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/NavRail/RaceNav" unique_id=1622004846]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_right = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="Circle" type="Panel" parent="HBoxContainer/NavRail/RaceNav/HBoxContainer2" unique_id=1260648655]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kpsxl")
+
+[node name="Label" type="Label" parent="HBoxContainer/NavRail/RaceNav/HBoxContainer2" unique_id=382000363]
+layout_mode = 2
+text = "Race"
+
+[node name="ClassNav" type="Button" parent="HBoxContainer/NavRail" unique_id=1943381072]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 60)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_mbq0b")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bqpd8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bs287")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tqx8g")
+toggle_mode = true
+button_group = ExtResource("2_locca")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/NavRail/ClassNav" unique_id=1321485809]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_right = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="Circle" type="Panel" parent="HBoxContainer/NavRail/ClassNav/HBoxContainer3" unique_id=1374394770]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kpsxl")
+
+[node name="Label" type="Label" parent="HBoxContainer/NavRail/ClassNav/HBoxContainer3" unique_id=37213955]
+layout_mode = 2
+text = "Class"
+
+[node name="BackgroundNav" type="Button" parent="HBoxContainer/NavRail" unique_id=2047755977]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 60)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_mbq0b")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bqpd8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bs287")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cb55y")
+toggle_mode = true
+button_group = ExtResource("2_locca")
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="HBoxContainer/NavRail/BackgroundNav" unique_id=1538052835]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_right = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="Circle" type="Panel" parent="HBoxContainer/NavRail/BackgroundNav/HBoxContainer4" unique_id=49991979]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kpsxl")
+
+[node name="Label" type="Label" parent="HBoxContainer/NavRail/BackgroundNav/HBoxContainer4" unique_id=1656494916]
+layout_mode = 2
+text = "Background"
+
+[node name="AbilitiesNav" type="Button" parent="HBoxContainer/NavRail" unique_id=1388208391]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 60)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_mbq0b")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bqpd8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bs287")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6jn8k")
+toggle_mode = true
+button_group = ExtResource("2_locca")
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="HBoxContainer/NavRail/AbilitiesNav" unique_id=963702923]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_right = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="Circle" type="Panel" parent="HBoxContainer/NavRail/AbilitiesNav/HBoxContainer5" unique_id=379632459]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kpsxl")
+
+[node name="Label" type="Label" parent="HBoxContainer/NavRail/AbilitiesNav/HBoxContainer5" unique_id=882362234]
+layout_mode = 2
+text = "Abilities"
+
+[node name="SpellsNav" type="Button" parent="HBoxContainer/NavRail" unique_id=39363805]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 60)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_mbq0b")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bqpd8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bs287")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ttryc")
+toggle_mode = true
+button_group = ExtResource("2_locca")
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="HBoxContainer/NavRail/SpellsNav" unique_id=142521869]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_right = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="Circle" type="Panel" parent="HBoxContainer/NavRail/SpellsNav/HBoxContainer6" unique_id=1553279712]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kpsxl")
+
+[node name="Label" type="Label" parent="HBoxContainer/NavRail/SpellsNav/HBoxContainer6" unique_id=347388246]
+layout_mode = 2
+text = "Spells"
+
+[node name="DetailPanel" type="PanelContainer" parent="HBoxContainer" unique_id=241913844]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(460, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/DetailPanel" unique_id=141497357]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="DetailTabs" type="TabContainer" parent="HBoxContainer/DetailPanel/MarginContainer" unique_id=1372860635]
+unique_name_in_owner = true
+layout_mode = 2
+current_tab = 5
+tabs_visible = false
+
+[node name="NameTab" type="VBoxContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs" unique_id=1851815127]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 16
+metadata/_tab_index = 0
+
+[node name="NameLabel" type="Label" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/NameTab" unique_id=384264771]
+layout_mode = 2
+text = "Character Name"
+
+[node name="NameEdit" type="LineEdit" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/NameTab" unique_id=140146895]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Enter a Name"
+
+[node name="TitleLabel" type="Label" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/NameTab" unique_id=122244001]
+layout_mode = 2
+text = "Title (optional)"
+
+[node name="TitleEdit" type="LineEdit" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/NameTab" unique_id=647438013]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "e.g The One Who Knocks"
+
+[node name="Spacer" type="Control" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/NameTab" unique_id=890713461]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RaceTab" type="VBoxContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs" unique_id=1202608390]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 16
+metadata/_tab_index = 1
+
+[node name="HeaderRow" type="HBoxContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/RaceTab" unique_id=1567419759]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="SelectedRaceIcon" type="TextureRect" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/RaceTab/HeaderRow" unique_id=1853062869]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SelectedRaceName" type="Label" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/RaceTab/HeaderRow" unique_id=936217153]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SelectedRaceSubtitle" type="Label" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/RaceTab/HeaderRow" unique_id=973950689]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="GridScroll" type="ScrollContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/RaceTab" unique_id=1381323129]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+horizontal_scroll_mode = 0
+
+[node name="RaceGrid" type="GridContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/RaceTab/GridScroll" unique_id=2011658084]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
+columns = 4
+
+[node name="DescSection" type="VBoxContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/RaceTab" unique_id=1480030011]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+theme_override_constants/separation = 4
+
+[node name="Label" type="Label" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/RaceTab/DescSection" unique_id=1801306939]
+layout_mode = 2
+text = "Description"
+
+[node name="DescScroll" type="ScrollContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/RaceTab/DescSection" unique_id=277035453]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RaceDescription" type="RichTextLabel" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/RaceTab/DescSection/DescScroll" unique_id=39210522]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="FeatureSection" type="VBoxContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/RaceTab" unique_id=2022530307]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+
+[node name="Label" type="Label" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/RaceTab/FeatureSection" unique_id=1882939335]
+layout_mode = 2
+text = "Features"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/RaceTab/FeatureSection" unique_id=754216723]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RaceFeatures" type="RichTextLabel" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/RaceTab/FeatureSection/ScrollContainer" unique_id=1983278959]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="ClassTab" type="VBoxContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs" unique_id=1569679780]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 16
+metadata/_tab_index = 2
+
+[node name="HeaderRow" type="HBoxContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/ClassTab" unique_id=716368783]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="SelectedClassIcon" type="TextureRect" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/ClassTab/HeaderRow" unique_id=159011849]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="SelectedClassName" type="Label" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/ClassTab/HeaderRow" unique_id=508334407]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/ClassTab" unique_id=1514246458]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+horizontal_scroll_mode = 0
+
+[node name="ClassGrid" type="GridContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/ClassTab/ScrollContainer" unique_id=306138169]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
+columns = 4
+
+[node name="DescSection" type="VBoxContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/ClassTab" unique_id=407691726]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 4
+
+[node name="Label" type="Label" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/ClassTab/DescSection" unique_id=1830087823]
+layout_mode = 2
+text = "Description"
+
+[node name="DescScroll" type="ScrollContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/ClassTab/DescSection" unique_id=256557444]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ClassDescription" type="RichTextLabel" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/ClassTab/DescSection/DescScroll" unique_id=1872703554]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="FeatureSection" type="VBoxContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/ClassTab" unique_id=667481920]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+
+[node name="Label" type="Label" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/ClassTab/FeatureSection" unique_id=2013200072]
+layout_mode = 2
+text = "Features"
+
+[node name="FeatureScroll" type="ScrollContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/ClassTab/FeatureSection" unique_id=575602913]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ClassFeatures" type="RichTextLabel" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/ClassTab/FeatureSection/FeatureScroll" unique_id=2097953305]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="BackgroundTab" type="VBoxContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs" unique_id=1631974704]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 16
+metadata/_tab_index = 3
+
+[node name="HeaderRow" type="HBoxContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/BackgroundTab" unique_id=606760676]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="SelectedBackgroundIcon" type="TextureRect" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/BackgroundTab/HeaderRow" unique_id=1511308738]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SelectedBackgroundName" type="Label" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/BackgroundTab/HeaderRow" unique_id=158262220]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="GridScroll" type="ScrollContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/BackgroundTab" unique_id=1736133065]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="BackgroundGrid" type="GridContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/BackgroundTab/GridScroll" unique_id=1791067974]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
+columns = 4
+
+[node name="DescSection" type="VBoxContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/BackgroundTab" unique_id=1617088098]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+theme_override_constants/separation = 4
+
+[node name="Label" type="Label" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/BackgroundTab/DescSection" unique_id=432034686]
+layout_mode = 2
+text = "Description"
+
+[node name="DescScroll" type="ScrollContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/BackgroundTab/DescSection" unique_id=1332706265]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BackgroundDescription" type="RichTextLabel" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/BackgroundTab/DescSection/DescScroll" unique_id=1673559572]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="SkillsSection" type="VBoxContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/BackgroundTab" unique_id=243650083]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 4
+
+[node name="Label" type="Label" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/BackgroundTab/SkillsSection" unique_id=1231667057]
+layout_mode = 2
+text = "Proficiencies"
+
+[node name="SkillsScroll" type="ScrollContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/BackgroundTab/SkillsSection" unique_id=723997406]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BackgroundSkills" type="RichTextLabel" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/BackgroundTab/SkillsSection/SkillsScroll" unique_id=141957038]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="EquipmentSection" type="VBoxContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/BackgroundTab" unique_id=1395916407]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+theme_override_constants/separation = 4
+
+[node name="Label" type="Label" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/BackgroundTab/EquipmentSection" unique_id=1227628776]
+layout_mode = 2
+text = "Starting Equipment"
+
+[node name="EquipmentScroll" type="ScrollContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/BackgroundTab/EquipmentSection" unique_id=1422110319]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BackgroundEquipment" type="RichTextLabel" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/BackgroundTab/EquipmentSection/EquipmentScroll" unique_id=1169454249]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="AbilitiesTab" type="VBoxContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs" unique_id=485695655]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 16
+metadata/_tab_index = 4
+
+[node name="HeaderRow" type="HBoxContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/AbilitiesTab" unique_id=1457412045]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/AbilitiesTab/HeaderRow" unique_id=355615569]
+layout_mode = 2
+text = "Ability Scores"
+
+[node name="PointsLabel" type="Label" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/AbilitiesTab/HeaderRow" unique_id=630450672]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_alignment = 2
+
+[node name="AbilityRows" type="VBoxContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/AbilitiesTab" unique_id=16486298]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="AbilityDescScrolls" type="ScrollContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/AbilitiesTab/AbilityRows" unique_id=185010203]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="AbilityDescriptions" type="RichTextLabel" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/AbilitiesTab/AbilityRows/AbilityDescScrolls" unique_id=289075222]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="SpellsTab" type="VBoxContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs" unique_id=80138963]
+layout_mode = 2
+theme_override_constants/separation = 16
+metadata/_tab_index = 5
+
+[node name="HeaderRow" type="HBoxContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/SpellsTab" unique_id=402518964]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="SelectedSpellIcon" type="TextureRect" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/SpellsTab/HeaderRow" unique_id=1494162276]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="NameContainer" type="VBoxContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/SpellsTab/HeaderRow" unique_id=1698257111]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 2
+
+[node name="SelectedSpellName" type="Label" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/SpellsTab/HeaderRow/NameContainer" unique_id=1837997612]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SelectedSpellSubtitle" type="Label" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/SpellsTab/HeaderRow/NameContainer" unique_id=1326234773]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CantripSelection" type="VBoxContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/SpellsTab" unique_id=1917804900]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+theme_override_constants/separation = 4
+
+[node name="CantripCountLabel" type="Label" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/SpellsTab/CantripSelection" unique_id=58556345]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CantripScroll" type="ScrollContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/SpellsTab/CantripSelection" unique_id=407576758]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="CantripGrid" type="GridContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/SpellsTab/CantripSelection/CantripScroll" unique_id=1300051663]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
+columns = 4
+
+[node name="SpellSection" type="VBoxContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/SpellsTab" unique_id=1344696578]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+theme_override_constants/separation = 4
+
+[node name="SpellCountLabel" type="Label" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/SpellsTab/SpellSection" unique_id=280638087]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SpellScroll" type="ScrollContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/SpellsTab/SpellSection" unique_id=1809692657]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="SpellGrid" type="GridContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/SpellsTab/SpellSection/SpellScroll" unique_id=742291733]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
+columns = 4
+
+[node name="DetailSection" type="VBoxContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/SpellsTab" unique_id=774459900]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+theme_override_constants/separation = 4
+
+[node name="Label" type="Label" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/SpellsTab/DetailSection" unique_id=281366575]
+layout_mode = 2
+text = "Details"
+
+[node name="DetailScroll" type="ScrollContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/SpellsTab/DetailSection" unique_id=1845129046]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="DetailColumn" type="VBoxContainer" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/SpellsTab/DetailSection/DetailScroll" unique_id=797810934]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="SpellStatBlock" type="RichTextLabel" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/SpellsTab/DetailSection/DetailScroll/DetailColumn" unique_id=791867253]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="SpellDescription" type="RichTextLabel" parent="HBoxContainer/DetailPanel/MarginContainer/DetailTabs/SpellsTab/DetailSection/DetailScroll/DetailColumn" unique_id=821747646]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="HBoxContainer" unique_id=1544021812]
+layout_mode = 2
+size_flags_horizontal = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer" unique_id=769232202]
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(817, 1049)
+render_target_update_mode = 4
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="HBoxContainer/SubViewportContainer/SubViewport" unique_id=171284087]
+environment = SubResource("Environment_locca")
+
+[node name="Camera3D" type="Camera3D" parent="HBoxContainer/SubViewportContainer/SubViewport" unique_id=876083421]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="HBoxContainer/SubViewportContainer/SubViewport" unique_id=1354347603]
+
+[node name="CharacterPreview" type="Node3D" parent="HBoxContainer/SubViewportContainer/SubViewport" unique_id=1155032253]
+unique_name_in_owner = true
+
+[node name="SummaryPanel" type="PanelContainer" parent="HBoxContainer" unique_id=1384348109]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/SummaryPanel" unique_id=1159480368]
+layout_mode = 2
+
+[node name="SummaryText" type="RichTextLabel" parent="HBoxContainer/SummaryPanel/MarginContainer" unique_id=1166317071]
+unique_name_in_owner = true
+layout_mode = 2
+bbcode_enabled = true

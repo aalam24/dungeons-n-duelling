@@ -4,12 +4,14 @@ var classes: Dictionary = {}
 var races: Dictionary = {}
 var backgrounds: Dictionary = {}
 var spells: Dictionary = {}
+var monsters: Dictionary = {}
 
 func _ready() -> void:
 	classes = _load_dir("res://rules/classes/")
 	races = _load_dir("res://rules/races/")
 	backgrounds = _load_dir("res://rules/backgrounds/")
 	spells = _load_dir("res://rules/spells/")
+	monsters = _load_dir("res://rules/monsters/")
 	
 func _load_dir(path: String) -> Dictionary: 
 	var out := {}

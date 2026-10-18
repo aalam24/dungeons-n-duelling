@@ -1,0 +1,17 @@
+[gd_resource type="Resource" format=3 uid="uid://cve5oqd2madux"]
+
+[ext_resource type="Script" uid="uid://b3oyrtrpfvk2o" path="res://rules/monster_def.gd" id="1_lrotr"]
+
+[resource]
+script = ExtResource("1_lrotr")
+id = "goblin"
+display_name = "Goblin"
+abilities = {
+"CHA": 8,
+"CON": 10,
+"DEX": 14,
+"INT": 10,
+"STR": 8,
+"WIS": 8
+}
+ac = 15

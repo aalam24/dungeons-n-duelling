@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dbnmd0o8wbfn5"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_kpsxl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mbq0b"]
+
+[node name="PlaceholderBody" type="Node3D" unique_id=1053379957]
+
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1339805382]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+mesh = SubResource("CapsuleMesh_kpsxl")
+surface_material_override/0 = SubResource("StandardMaterial3D_mbq0b")

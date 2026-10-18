@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://dqy6dmeuc48ik"]
+
+[ext_resource type="Script" uid="uid://rgliln0uddxs" path="res://scripts/ui/skill_picker.gd" id="1_0s64t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w7rsg"]
+bg_color = Color(0.19076231, 0.19076234, 0.19076222, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.37833685, 0.90027225, 0.83180785, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="SkillPicker" type="PanelContainer" unique_id=1357242051]
+theme_override_styles/panel = SubResource("StyleBoxFlat_w7rsg")
+script = ExtResource("1_0s64t")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1351486908]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1805435556]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1067054918]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Skills"
+horizontal_alignment = 1
+
+[node name="Blurb" type="Label" parent="MarginContainer/VBoxContainer" unique_id=2102188683]
+layout_mode = 2
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="CountRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=765575947]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer/CountRow" unique_id=2466339]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CountLabel" type="Label" parent="MarginContainer/VBoxContainer/CountRow" unique_id=687939413]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="RowScroll" type="ScrollContainer" parent="MarginContainer/VBoxContainer" unique_id=1987785330]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Rows" type="VBoxContainer" parent="MarginContainer/VBoxContainer/RowScroll" unique_id=204688171]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="ButtonRow" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=513899354]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="CancelButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonRow" unique_id=986486291]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Cancel"
+
+[node name="ConfirmSkillsButton" type="Button" parent="MarginContainer/VBoxContainer/ButtonRow" unique_id=1845950925]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Confirm"

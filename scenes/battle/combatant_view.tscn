@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://6i3fpav6kuig"]
+
+[ext_resource type="Script" uid="uid://dc3d7dxv381mw" path="res://scripts/battle/combatant_view.gd" id="1_i5v4l"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_kpsxl"]
+radius = 0.35
+height = 1.8
+
+[sub_resource type="TorusMesh" id="TorusMesh_kpsxl"]
+outer_radius = 0.6
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kpsxl"]
+radius = 0.35
+height = 1.8
+
+[node name="CombatantView" type="Node3D" unique_id=1238600434]
+script = ExtResource("1_i5v4l")
+
+[node name="Body" type="MeshInstance3D" parent="." unique_id=1312507962]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+mesh = SubResource("CapsuleMesh_kpsxl")
+
+[node name="NameLabel" type="Label3D" parent="." unique_id=581307982]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1, 0)
+billboard = 1
+no_depth_test = true
+
+[node name="SelectionRing" type="MeshInstance3D" parent="." unique_id=1553625291]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02, 0)
+visible = false
+mesh = SubResource("TorusMesh_kpsxl")
+
+[node name="HitArea" type="StaticBody3D" parent="." unique_id=1086847800]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitArea" unique_id=1520929410]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("CapsuleShape3D_kpsxl")

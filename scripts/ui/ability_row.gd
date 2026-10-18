@@ -22,6 +22,9 @@ func _ready() -> void:
 	_major.toggled.connect(func(on): major_picked.emit(key, on))
 	_minor.toggled.connect(func(on): minor_picked.emit(key, on))
 	_label.text = key
+	var path := "res://ui/icons/abilities/%s_icon.png" % key.to_lower()
+	if ResourceLoader.exists(path):
+		$AbilityIcon.texture = load(path)
 	
 func refresh(total: int, mod: int, can_raise: bool, can_lower: bool) -> void:
 	_total.text = str(total)

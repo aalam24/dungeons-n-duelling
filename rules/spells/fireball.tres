@@ -1,6 +1,7 @@
 [gd_resource type="Resource" script_class="SpellDef" format=3 uid="uid://ct6fux4ly0gpw"]
 
 [ext_resource type="Script" uid="uid://ck72s4gnt1ypy" path="res://rules/spell_def.gd" id="1_i2sq6"]
+[ext_resource type="Texture2D" uid="uid://h1f1lkrayyxc" path="res://ui/icons/spells/fireball_icon.png" id="1_r5q1b"]
 
 [resource]
 script = ExtResource("1_i2sq6")
@@ -8,6 +9,7 @@ id = "fireball"
 display_name = "Fireball"
 level = 3
 description = "A bright streak flashes from you to a point you choose within range and then blossoms with a low roar into a fiery explosion. Each creature in a 20-foot-radius Sphere centered on that point makes a Dexterity saving throw, taking 8d6 Fire damage on a failed save or half as much damage on a successful one."
+icon = ExtResource("1_r5q1b")
 range_ft = 150
 target_mode = 2
 area_size_ft = 20
@@ -15,4 +17,5 @@ save_ability = "DEX"
 save_effect = 1
 damage_dice = "8d6"
 damage_type = "fire"
+upcast_dice = "1d6"
 metadata/_custom_type_script = "uid://ck72s4gnt1ypy"

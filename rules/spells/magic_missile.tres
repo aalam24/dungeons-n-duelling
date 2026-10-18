@@ -1,5 +1,6 @@
 [gd_resource type="Resource" script_class="SpellDef" format=3 uid="uid://cb4p0lbwhfrek"]
 
+[ext_resource type="Texture2D" uid="uid://cp3r3shg8up4n" path="res://ui/icons/spells/magic_missile_icon.png" id="1_i7j72"]
 [ext_resource type="Script" uid="uid://ck72s4gnt1ypy" path="res://rules/spell_def.gd" id="1_vdib6"]
 
 [resource]
@@ -7,7 +8,9 @@ script = ExtResource("1_vdib6")
 id = "magic_missile"
 display_name = "Magic Missile"
 description = "You create three glowing darts of magical force. Each dart strikes a creature of your choice that you can see within range. A dart deals 1d4 + 1 Force damage to its target. The darts all strike simultaneously, and you can direct them to hit one creature or several."
+icon = ExtResource("1_i7j72")
 range_ft = 120
-damage_dice = "1d4 + 1"
+damage_dice = "1d4+1"
 damage_type = "force"
+projectiles = 3
 metadata/_custom_type_script = "uid://ck72s4gnt1ypy"
